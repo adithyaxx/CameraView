@@ -1293,6 +1293,10 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
             case FRONT:
                 setFacing(Facing.BACK);
                 break;
+
+            default:
+                // Do nothing for external camera
+                break;
         }
 
         return mCameraEngine.getFacing();

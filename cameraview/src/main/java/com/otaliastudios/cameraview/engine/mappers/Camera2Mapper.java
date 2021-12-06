@@ -47,6 +47,7 @@ public class Camera2Mapper {
     static {
         FACING.put(Facing.BACK, CameraCharacteristics.LENS_FACING_BACK);
         FACING.put(Facing.FRONT, CameraCharacteristics.LENS_FACING_FRONT);
+        FACING.put(Facing.EXTERNAL, CameraCharacteristics.LENS_FACING_EXTERNAL);
         WB.put(WhiteBalance.AUTO, CameraCharacteristics.CONTROL_AWB_MODE_AUTO);
         WB.put(WhiteBalance.CLOUDY, CameraCharacteristics.CONTROL_AWB_MODE_CLOUDY_DAYLIGHT);
         WB.put(WhiteBalance.DAYLIGHT, CameraCharacteristics.CONTROL_AWB_MODE_DAYLIGHT);
