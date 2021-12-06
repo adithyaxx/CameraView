@@ -801,7 +801,10 @@ public class CameraView extends FrameLayout implements LifecycleObserver {
         if (checkPermissions(getAudio())) {
             // Update display orientation for current CameraEngine
             mOrientationHelper.enable();
-            mCameraEngine.getAngles().setDisplayOffset(mOrientationHelper.getLastDisplayOffset());
+            if (mCameraEngine.getFacing() == Facing.EXTERNAL)
+                mCameraEngine.getAngles().setDisplayOffset(180);
+            else
+                mCameraEngine.getAngles().setDisplayOffset(mOrientationHelper.getLastDisplayOffset());
             mCameraEngine.start();
         }
     }
